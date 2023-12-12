@@ -12,9 +12,11 @@ public class _04_Comment {
 
         // 한 줄 수석 단축키 : Command + /
         // 여러 줄 주석 단축키 : Command + Shift + /
-        /*int a = 10;
+        /*
+        int a = 10;
         int b = 20;
-        System.out.println(a + b);*/
+        System.out.println(a + b);
+        */
 
     }
 }
