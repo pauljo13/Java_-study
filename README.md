@@ -73,3 +73,42 @@ String s1 = Double.toString(실수)
 문자형 -> 숫자형(정수,실수)  
 int i = Integer.parseInt("문자");  
 double d = Double.parseDouble("문자");  
+
+### 산술 연산자
+- 일반 연산
+System.out.println(4 + 2); // 6
+System.out.println(4 - 2); // 2
+System.out.println(4 * 2); // 8
+System.out.println(4 / 2); // 2
+System.out.println(5 / 2); // 2.5(X) 2(O)
+System.out.println(2 / 4); // 0.5(X) 0(O)
+System.out.println(4 % 2); // 0 나머지
+System.out.println(5 % 2); // 1
+  
+- 우선 순위 연산
+System.out.println(2 + 2 * 2); // 6 -> 곱하기를 우선적으로 처리
+System.out.println((2 + 2) * 2); // 8 -> 괄호를 사용하여 더하기를 우선 처리
+
+- 변수를 이용한 연산
+int a = 20;
+int b = 10;
+int c;
+c = a + b;
+System.out.println(c); // 30
+c = a -b;
+System.out.println(c); // 10
+c = a * b;
+System.out.println(c); // 200
+c = a / b;
+System.out.println(c); // 2
+c = a % b;
+System.out.println(c); // 0
+
+- 증감 연산 : ++, --
+x = x + 1;
+x++ 출력 후 증감
+++x 증감 후 출력
+x = x - 1;
+x-- 출력 후 증감
+--x 증감 후 출력
+
