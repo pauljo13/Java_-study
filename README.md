@@ -100,4 +100,91 @@ System.out.println(c); // 30
 
 자바 프로그래밍에서 이러한 개념들을 이해하고 적절히 사용하는 것은 프로그램의 정확성과 가독성을 높이는 데 중요합니다.
 
+## 자바 기초 - 4일차
+### 대입 연산자
+```java
+int num = 10;
+num = num + 2; // 12
+num = num - 2; // 10
+num = num * 2; // 20
+num = num / 2; // 10
+num = num % 2; // 0
+```
+
+### 복합 대입 연산자
+복합 대입 연산자는 다른 연산(덧셈, 뺄셈 등)과 대입을 결합합니다.  
+```java
+int num = 10;
+num += 2; // 12
+num -= 2; // 10
+num *= 2; // 20
+num /= 2; // 10
+num %= 2; // 0
+```
+
+### 비교 연산자
+비교 연산자는 두 값이나 변수를 비교하고, 그 결과로 참(true) 또는 거짓(false)을 반환합니다.
+- x > y : x가 y보다 크다.
+- x >= y : x가 y보다 크거나 같다.
+- x < y : x가 y보다 작다.
+- x <= y : x가 y보다 작거나 같다.
+- x == y : x와 y는 같다.
+- x != y : x와 y는 다르다.
+
+### 논리 연산자
+논리 연산자는 참(true) 또는 거짓(false) 값을 가진 두 조건을 결합합니다.
+1. ***AND 연산자***
+   - 두 조건이 모두 참일 때만 참을 반환하는 논리 연산자,  만약 두 조건 중 하나라도 거짓이라면, AND 연산의 결과는 거짓(false)이 됩니다.
+   - "&&" 로 표현
+   ```java
+   boolean a = true;
+   boolean b = false;
+
+   // 두 조건 모두 참일 때만 참 반환
+   System.out.println(a && a); // true
+   System.out.println(a && b); // false
+   System.out.println(b && b); // false
+   ```
+
+2. ***OR 연산자***
+   - 두 조건 중 하나라도 참일 때 참을 반환하는 논리 연산자, 두 조건 중 하나라도 참이면, OR 연산의 결과는 참(true)이 됩니다. 만약 두 조건 모두 거짓일 때만, OR 연산의 결과는 거짓(false)이 됩니다.
+   - "||" 로 표현
+   - 조건A || 조건B
+   ```java
+   boolean a = true;
+   boolean b = false;
+
+   // 두 조건 중 하나라도 참이면 참 반환
+   System.out.println(a || a); // true
+   System.out.println(a || b); // true
+   System.out.println(b || b); // false
+   ```
+
+3. ***논리 부정 연산자***
+   - 논리 부정 연산자(!)는 참(true)과 거짓(false)의 결과를 반대로 바꾸는데 사용됩니다. 이 연산자는 주로 불리언(boolean) 표현식에 적용되어, true를 false로, false를 true로 바꿉니다.
+   ```java
+   System.out.println(!true); // false
+   System.out.println(!false); // true
+   System.out.println(!(5 == 5)); // false
+   System.out.println(!(5 == 3)); // true
+   ```
+
+### 삼항 연산자
+간단한 조건문을 한 줄로 표현할 수 있는 연산자입니다. 삼항 연산자는 조건을 평가한 후 두 개의 가능한 결과 중 하나를 반환합니다. 기본 형식은 조건 ? 결과1 : 결과2입니다. 여기서 조건이 참(true)이면 결과1을 반환하고, 거짓(false)이면 결과2를 반환합니다.  
+   - 결과 = (조건) ? (참의 경우 결과값) : (거짓의 경우 결과값)
+   ```java
+   int x = 3;
+   int y = 5;
+   int max = (x > y) ? x :y;
+   System.out.println(max); // 5
+
+   int min = (x < y) ? x : y;
+   System.out.println(min); // 3
+
+   boolean b = (x == y) ? true : false;
+   System.out.println(b);
+
+   String s = (x != y) ? "달라요" : "같아요";
+   System.out.println(s);
+   ```
 
