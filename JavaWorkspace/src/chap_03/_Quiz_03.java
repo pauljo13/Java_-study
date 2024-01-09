@@ -12,3 +12,4 @@ public class _Quiz_03 {
         System.out.println(rr_number2.substring(0,index_2));
     }
 }
+
