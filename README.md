@@ -265,4 +265,70 @@ equalsIgnoreCase()는 대소문자를 구분하지 않고 문자열의 내용을
   
 Java와 같은 프로그래밍 언어에서 이스케이프 문자의 이해는 문자열을 더욱 효과적으로 다루는 데 필수적입니다. 이러한 문자들은 코드의 가독성을 높이고, 복잡한 문자열 형식을 간단하게 표현하는 데 도움을 줍니다.
 
+## 자바 기초 - 6회차
+### if 가정문
+if 문은 특정 조건이 참(True)일 때만 코드 블록을 실행하는 기본적인 제어문입니다. 자바에서 if 문의 기본 구조는 다음과 같습니다:
+```java
+if (조건) {
+    // 조건이 참일 때 실행될 코드
+}
+```
+예시 : 
+```java
+int number = 10;
+
+if (number > 5) {
+    System.out.println("숫자는 5보다 큽니다.");
+}
+
+```
+### if else
+if-else 문은 if 문의 조건이 거짓(False)일 때 실행할 코드 블록을 추가할 수 있습니다. 구조는 다음과 같습니다:
+```java
+if (조건) {
+    // 조건이 참일 때 실행될 코드
+} else {
+    // 조건이 거짓일 때 실행될 코드
+}
+```
+예시 : 
+```java
+int age = 18;
+
+if (age >= 20) {
+    System.out.println("성인입니다.");
+} else {
+    System.out.println("미성년자입니다.");
+}
+```
+### else if
+else if 문을 사용하면 여러 조건을 순차적으로 테스트할 수 있습니다. else if는 if 뒤에 오며, 여러 개를 사용할 수 있습니다:
+```java
+if (조건1) {
+    // 조건1이 참일 때 실행될 코드
+} else if (조건2) {
+    // 조건1이 거짓이고 조건2가 참일 때 실행될 코드
+} else {
+    // 모든 조건이 거짓일 때 실행될 코드
+}
+```
+예시 :
+```java
+int score = 75;
+
+if (score >= 90) {
+    System.out.println("A등급");
+} else if (score >= 80) {
+    System.out.println("B등급");
+} else if (score >= 70) {
+    System.out.println("C등급");
+} else {
+    System.out.println("D등급");
+}
+```
+### Swith Case
+### For
+### While
+### Do While
+
 [참조 유튜브](https://www.youtube.com/watch?v=NQq0dOoEPUM&list=WL&index=3&t=12131s)
