@@ -471,9 +471,109 @@ for (int i = 1; i <= 10; i++) {
 
 ## 자바 기초 - 7회차
 ### 배열
-#### 배열 순환
-#### 다차원 배열
-#### 다차원 배열 순황
-### 아스키 코드
+자바에서 배열은 같은 타입의 여러 변수를 하나의 묶음으로 다루기 위해 사용하는 데이터 구조입니다. 배열을 사용하면 하나의 변수명으로 여러 데이터를 관리할 수 있어, 데이터 관리가 편리해집니다.  
+  
+#### 배열 생성법
+자바에서 배열을 생성하는 방법은 여러 가지가 있습니다. 아래는 배열을 생성하는 네 가지 기본적인 방법입니다.  
+```java
+// 방법 1: 배열 선언 후 크기 할당
+String[] array1 = new String[4];
 
+// 방법 2: 배열 선언 방식의 변형
+String array2[] = new String[4];
+
+// 방법 3: 배열 선언과 동시에 초기화
+String[] array3 = new String[] {"A", "B", "C", "D"};
+
+// 방법 4: 배열 선언과 동시에 간단한 초기화
+String[] array4 = {"A", "B", "C", "D"};
+
+// 다른 자료형으로 배열 생성
+int[] i = {1, 2, 3};
+double[] d = {10.0, 11.2, 13.5};
+boolean[] b = {true, false, true};
+```
+#### 배열 순환
+배열의 각 요소에 접근하기 위해 'for' 루프 또는 'for-each' 루프를 사용할 수 있습니다.  
+```java
+// 일반적인 for 루프를 사용하여 배열 순환
+for(int index = 0; index < array1.length; index++) {
+    System.out.println(array1[index]);
+}
+
+// for-each 루프를 사용하여 배열 순환
+for(String element : array4) {
+    System.out.println(element);
+}
+```
+
+#### 다차원 배열
+자바에서는 2차원 이상의 다차원 배열도 사용할 수 있습니다. 가장 흔히 사용되는 다차원 배열은 2차원 배열입니다.
+```java
+// 2차원 배열 선언 및 초기화
+int[][] twoDimArray = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+
+// 3차원 배열 예시
+int[][][] threeDimArray = { {{1, 2}, {3, 4}}, {{5, 6}, {7, 8}} };
+
+```
+
+#### 다차원 배열 순황
+다차원 배열을 순환할 때는 중첩된 for 루프를 사용합니다.
+```java
+// 2차원 배열 순환
+for(int i = 0; i < twoDimArray.length; i++) {
+    for(int j = 0; j < twoDimArray[i].length; j++) {
+        System.out.print(twoDimArray[i][j] + " ");
+    }
+    System.out.println();
+}
+
+// 3차원 배열 순환
+for(int i = 0; i < threeDimArray.length; i++) {
+    for(int j = 0; j < threeDimArray[i].length; j++) {
+        for(int k = 0; k < threeDimArray[i][j].length; k++) {
+            System.out.print(threeDimArray[i][j][k] + " ");
+        }
+        System.out.println();
+    }
+    System.out.println();
+}
+
+```
+### 아스키 코드
+아스키 코드(ASCII, American Standard Code for Information Interchange)는 문자를 숫자로 변환하는 데 사용되는 표준 인코딩 시스템입니다. 자바에서 아스키 코드는 문자(char) 데이터 타입과 밀접하게 연관되어 있으며, 문자와 숫자 간의 변환에 자주 사용됩니다.
+  
+아스키 코드는 128개의 문자를 정의하고 있으며, 이 중 0부터 31까지는 제어 문자(Control Characters)로 사용되고, 32부터 127까지는 출력 가능한 문자(Printable Characters)로 사용됩니다.
+  
+대문자, 소문자, 숫자의 시작 번호
+- 대문자('A'부터 'Z'): 아스키 코드에서 대문자는 65('A')부터 시작하여 90('Z')까지 할당되어 있습니다.
+- 소문자('a'부터 'z'): 아스키 코드에서 소문자는 97('a')부터 시작하여 122('z')까지 할당되어 있습니다.
+- 숫자('0'부터 '9'): 아스키 코드에서 숫자는 48('0')부터 시작하여 57('9')까지 할당되어 있습니다.
+  
+```java
+public class AsciiExample {
+    public static void main(String[] args) {
+        // 대문자 A의 아스키 코드 값
+        char upperCase = 'A';
+        int asciiUpperCase = (int) upperCase;
+        System.out.println("ASCII code of 'A': " + asciiUpperCase);
+
+        // 소문자 a의 아스키 코드 값
+        char lowerCase = 'a';
+        int asciiLowerCase = (int) lowerCase;
+        System.out.println("ASCII code of 'a': " + asciiLowerCase);
+
+        // 숫자 0의 아스키 코드 값
+        char number = '0';
+        int asciiNumber = (int) number;
+        System.out.println("ASCII code of '0': " + asciiNumber);
+    }
+}
+
+```
+이 예시 코드는 문자 'A', 'a', '0'의 아스키 코드 값을 출력합니다. 자바에서 이와 같이 간단한 타입 변환을 통해 문자의 아스키 코드 값을 얻을 수 있습니다.
+  
+아스키 코드는 문자열 처리나 암호화, 네트워크 통신 등 다양한 분야에서 활용됩니다. 기본적인 이해를 바탕으로, 실제 적용 사례를 통해 더 깊이있는 학습을 진행하는 것이 좋습니다.
+  
 [참조 유튜브](https://www.youtube.com/watch?v=NQq0dOoEPUM&list=WL&index=3&t=12131s)
