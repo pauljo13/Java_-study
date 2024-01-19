@@ -469,4 +469,11 @@ for (int i = 1; i <= 10; i++) {
 
 ``` 
 
+## 자바 기초 - 7회차
+### 배열
+#### 배열 순환
+#### 다차원 배열
+#### 다차원 배열 순황
+### 아스키 코드
+
 [참조 유튜브](https://www.youtube.com/watch?v=NQq0dOoEPUM&list=WL&index=3&t=12131s)
