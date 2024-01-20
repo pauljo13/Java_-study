@@ -1,6 +1,13 @@
 package chap_06;
 
 public class _Quiz_06 {
+    public static String getHiddenData(String str,int number) {
+        String result = str.substring(0,number);
+        for (int i = 0; i < str.length()-number; i++) {
+            result += "*";
+        }
+        return result;
+    }
     public static void main(String[] args) {
         // 개인 정보 중 일부를 비공개로 전환하는 프로그램
         // 조건
@@ -10,6 +17,13 @@ public class _Quiz_06 {
         // - 주민등록번호 9 번째 글자
         // - 전화번호 10 번째 글자
         String name = "나코딩";
-        String id = "990130-123"
+        String id = "990130-1234567";
+        String phone = "010-1234-5678";
+
+
+        System.out.println("이름 : " + getHiddenData(name,1));
+        System.out.println("주민등록번호 : " + getHiddenData(id, 8));
+        System.out.println("전화번호 : " + getHiddenData(phone, 9));
+
     }
 }
